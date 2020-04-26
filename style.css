@@ -1,0 +1,476 @@
+body {
+    background-color: #DC4227;
+    overflow-x: hidden;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.test, .test2 {
+    font-family: "Bungee", cursive;
+    font-size: 75px;
+    position: absolute;
+    color: #771F15;
+}
+
+#test-0, #test2-0 {
+    font-family: "Bungee Inline", cursive;
+    color: white;
+    z-index: 1;
+}
+
+#vl {
+    position: absolute;
+    background-color: #771F15;
+    height: 100px;
+    width: 2.5px;
+    left: calc(50vw + 32px);
+    top: calc(50vh - 57px);
+    visibility: hidden;
+    animation: vl-expand 1s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes vl-expand {
+    from {
+        transform: scaleY(0.01);
+        visibility: visible;
+    }
+    to {
+        transform: scaleY(1);
+        visibility: visible;
+    }
+}
+
+#profile-picture {
+    position: absolute;
+    width: 150px;
+    left: calc(50vw + 82px);
+    top: calc(50vh - 65px);
+    animation: picture-reveal 0.6s;
+    animation-delay: 0.4s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes picture-reveal {
+    from {
+        top: calc(50vh - 65px);
+        opacity: 0;
+    }
+    to {
+        top: calc(50vh - 80px);
+        opacity: 1;
+    }
+}
+
+#description {
+    position: absolute;
+    font-family: "Roboto Mono", monospace;
+    color: #3D100A;
+    left: calc(50vw - 253px);
+    top: calc(50vh + 148px);
+    animation: description-reveal 0.4s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+#description-br {
+    display: none;
+}
+
+@keyframes description-reveal {
+    from {
+        top: calc(50vh + 123px);
+        opacity: 0;
+    }
+    to {
+        top: calc(50vh + 138px);
+        opacity: 1;
+    }
+}
+
+#start-arrow {
+    position: absolute;
+    left: calc(50vw - 48px);
+    bottom: 15px;
+    width: 50px;
+    animation: start-arrow-reveal 0.3s;
+    animation-delay: 2s;
+    opacity: 0;
+}
+
+#start-arrow:hover {
+    cursor: pointer;
+}
+
+@keyframes start-arrow-mover {
+    0% {
+        bottom: 15px;
+    }
+    50% {
+        bottom: 25px;
+    }
+    100% {
+        bottom: 15px;
+    }
+}
+
+@keyframes start-arrow-reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#section-2 {
+    background-color: #E71B26;
+    min-height: 100vh;
+    width: 100vw;
+    margin-left: -8px;
+    margin-top: -8px;
+    margin-top: 100vh;
+}
+
+#sign, #sign-glow {
+    position: absolute;
+    width: 160px;
+    left: 18vw;
+    top: calc(100vh + 50px);
+    z-index: 1;
+}
+
+#sign-glow {
+    opacity: 0;
+}
+
+@keyframes sign-glow-on {
+    0% {
+        opacity: 0;
+    }
+    7% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 0.1;
+    }
+    28% {
+        opacity: 0.8;
+    }
+    36% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.75;
+    }
+    70% {
+        opacity: 0.9;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#info {
+    position: absolute;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    background-color: #630B13;
+    color: #FFFFFF;
+    width: 6000px;
+    min-height: calc(100vh - 80px);
+    left: 33.8vw;
+    margin-top: 0px;
+    padding-left: 80px;
+    padding-top: 80px;
+}
+
+#info-text {
+    position: absolute;
+    font-family: "Quicksand", sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    width: 50vw;
+    max-width: 768px;
+    left: 33.8vw;
+    padding-left: 80px;
+    margin-top: 190px;
+    opacity: 0;
+}
+
+@keyframes info-reveal {
+    0% {
+        opacity: 0;
+        margin-top: 200px;
+    }
+    100% {
+        opacity: 1;
+        margin-top: 190px;
+    }
+}
+
+#gradient {
+    position: absolute;
+    left: calc(33.8vw - 100px);
+    height: 100vh;
+    width: 100px;
+}
+
+#hello {
+    font-family: "Roboto Mono", monospace;
+    font-size: 55px;
+}
+
+#hello-divider {
+    position: absolute;
+    width: 35px;
+    height: 6px;
+    left: calc(33.8vw + 83.5px);
+    margin-top: 132px;
+    background-color: #E71B26;
+    z-index: 1;
+}
+
+#ju {
+    color: #E71B26;
+    text-decoration: none;
+}
+
+#ju:hover {
+    text-decoration: underline;
+}
+
+#section-3 {
+    height: 100vh;
+}
+
+#section-3 > img, #section-3 > a > img {
+    position: absolute;
+    width: 150px;
+    margin-top: 200px;
+}
+
+#technologies {
+    position: absolute;
+    font-family: "Bungee Inline", monospace;
+    font-size: 40px;
+    color: #FFFFFF;
+    left: calc(50vw - 285px);
+}
+
+#javascript, #javascript-grey {
+    width: 75px !important;
+    margin-top: 457px !important;
+}
+
+#jquery, #jquery-grey {
+    width: 180px !important;
+    margin-top: 405px !important;
+}
+
+#html, #html-grey, #css, #css-grey {
+    width: 110px !important;
+    margin-top: 432px !important;
+}
+
+#node, #node-grey {
+    margin-top: 150px !important;
+}
+
+#express {
+    width: 180px !important;
+    margin-top: 135px !important;
+}
+
+#unity {
+    width: 75px !important;
+    margin-top: 190px !important;
+}
+
+#csharp, #csharp-grey {
+    width: 75px !important;
+    margin-top: 190px !important;
+}
+
+#android, #android-grey {
+    width: 90px !important;
+    margin-top: 300px !important;
+}
+
+#kotlin, #kotlin-grey {
+    width: 65px !important;
+    margin-top: 307px !important;
+}
+
+#docker, #docker-grey {
+    width: 90px !important;
+    margin-top: 295px !important;
+}
+
+#mysql, #mysql-grey {
+    width: 90px !important;
+    margin-top: 295px !important;
+}
+
+#firebase, #firebase-grey {
+    width: 80px !important;
+    margin-top: 300px !important;
+}
+
+#html, #css, #javascript, #jquery, #node, #csharp, #android, #kotlin, #firebase, #docker, #mysql {
+    opacity: 0;
+    transition: 0.18s;
+}
+
+#html:hover, #css:hover, #javascript:hover, #jquery:hover, #node:hover, #csharp:hover, #android:hover, #kotlin:hover, #firebase:hover, #docker:hover, #mysql:hover, #unity:hover, #express:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#html, #html-grey {
+    left: calc(50vw - 299.5px);
+}
+
+#css, #css-grey {
+    left: calc(50vw - 169px);
+}
+
+#javascript, #javascript-grey {
+    left: calc(50vw - 15px);
+}
+
+#jquery, #jquery-grey {
+    left: calc(50vw + 107.5px);
+}
+
+#node, #node-grey {
+    left: calc(50vw - 299.5px);
+}
+
+#express {
+    left: calc(50vw - 100px);
+}
+
+#unity {
+    left: calc(50vw + 115px);
+}
+
+#csharp, #csharp-grey {
+    left: calc(50vw + 238px);
+}
+
+#android, #android-grey {
+    left: calc(50vw - 299.5px);
+}
+
+#kotlin, #kotlin-grey {
+    left: calc(50vw - 150px);
+}
+
+#docker, #docker-grey {
+    left: calc(50vw - 30px);
+}
+
+#mysql, #mysql-grey {
+    left: calc(50vw + 100px)
+}
+
+#firebase, #firebase-grey {
+    left: calc(50vw + 230px);
+}
+
+/*3 icons in horizontal on phone?*/
+
+@media (max-width: 999px) {
+    .test, .test2 {
+        font-size: 15vw;
+    }
+
+    #start-arrow {
+        left: calc(50vw - 25px);
+    }
+
+    #vl {
+        height: 2.5px;
+        width: 40vw;
+        left: 32vw;
+        top: calc(38vh + 15vw);
+        animation: vl-expand 1s;
+        animation-delay: 0.25s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes vl-expand {
+        from {
+            transform: scaleX(0.01);
+            visibility: visible;
+        }
+        to {
+            transform: scaleX(1);
+            visibility: visible;
+        }
+    }
+
+    #profile-picture {
+        width: 47vw;
+        left: 28vw;
+        top: calc(38vh + 30vw);
+        animation: picture-reveal 0.6s;
+        animation-delay: 0.4s;
+        animation-fill-mode: forwards;
+    }
+    
+    @keyframes picture-reveal {
+        from {
+            top: calc(38vh - 36vw);
+            opacity: 0;
+        }
+        to {
+            top: calc(38vh - 40vw);
+            opacity: 1;
+        }
+    }
+
+    @keyframes picture-reveal-android {
+        from {
+            top: calc(38vh - 36vw - 30px);
+            opacity: 0;
+        }
+        to {
+            top: calc(38vh - 40vw - 30px);
+            opacity: 1;
+        }
+    }
+
+    #description {
+        text-align: center;
+        left: calc(50vw - 120px);
+        top: calc(38vh + 36vw);
+        animation: description-reveal 0.4s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+        opacity: 0;
+    }
+    
+    @keyframes description-reveal {
+        from {
+            top: calc(38vh + 56vw);
+            opacity: 0;
+        }
+        to {
+            top: calc(38vh + 60vw);
+            opacity: 1;
+        }
+    }
+
+    #description-br {
+        display: inline;
+    }
+}
+
+/*#62A846*/
