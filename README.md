@@ -1,2 +1,0 @@
-# williamsoeder-se
-williamsoeder.se
