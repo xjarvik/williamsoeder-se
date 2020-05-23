@@ -3,7 +3,7 @@ const baseFirstNameTopMobile = "38vh"
 const baseLastNameLeftMobile = "24vw"
 const baseLastNameTopMobile = "38vh"
 
-document.addEventListener("DOMContentLoaded", function(event){
+window.addEventListener("load", function(event){
     if(window.innerWidth < 1000){
         if(navigator.userAgent.match(/Android/i)){
             document.getElementById("vl").style.top = "calc(38vh + 15vw - 30px)"

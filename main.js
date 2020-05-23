@@ -8,7 +8,7 @@ const baseFirstNameTop = 150
 const baseLastNameLeft = 488
 const baseLastNameTop = 230
 
-document.addEventListener("DOMContentLoaded", function(event){
+window.addEventListener("load", function(event){
     if(window.innerWidth >= 1000){
         setNamePosition()
         animateName()
