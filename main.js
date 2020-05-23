@@ -10,6 +10,7 @@ const baseLastNameTop = 230
 
 window.addEventListener("load", function(event){
     if(window.innerWidth >= 1000){
+        addAnimations()
         setNamePosition()
         animateName()
         showStartArrow()
@@ -18,6 +19,27 @@ window.addEventListener("load", function(event){
     setSignPosition()
     setInfoSectionHeight()
 })
+
+const addAnimations = function(){
+    const vl = document.getElementById("vl")
+    vl.style.animation = "vl-expand 1s"
+    vl.style.animationDelay = "0.25s"
+    vl.style.animationFillMode = "forwards"
+
+    const profilePicture = document.getElementById("profile-picture")
+    profilePicture.style.animation = "picture-reveal 0.6s"
+    profilePicture.style.animationDelay = "0.4s"
+    profilePicture.style.animationFillMode = "forwards"
+
+    const description = document.getElementById("description")
+    description.style.animation = "description-reveal 0.4s"
+    description.style.animationDelay = "1s"
+    description.style.animationFillMode = "forwards"
+
+    const startArrow = document.getElementById("start-arrow")
+    startArrow.style.animation = "start-arrow-reveal 0.3s"
+    startArrow.style.animationDelay = "2s"
+}
 
 const setNamePosition = function(){
     const frontTest = document.getElementById("test-0")

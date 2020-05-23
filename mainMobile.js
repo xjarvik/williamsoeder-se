@@ -5,6 +5,7 @@ const baseLastNameTopMobile = "38vh"
 
 window.addEventListener("load", function(event){
     if(window.innerWidth < 1000){
+        addAnimations()
         if(navigator.userAgent.match(/Android/i)){
             document.getElementById("vl").style.top = "calc(38vh + 15vw - 30px)"
             document.getElementById("profile-picture").style.animation = "picture-reveal-android 0.6s"
